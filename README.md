@@ -9,30 +9,29 @@ Este repositório apresenta as soluções para a **Lista de Exercícios 3** da d
 O projeto está organizado em **pastas separadas por exercício**, com um diretório compartilhado de recursos para centralizar os estilos e scripts comuns.
 
 /
-├── assets/
-│ ├── styles.css # Estilos globais (menu, identidade visual etc.)
-│ └── scripts.js # Comportamento JS (menu hamburger, responsividade)
-│
-├── exercicio01/
-│ └── index.html # HTML semântico com header, main e footer
-│
-├── exercicio02/
-│ └── listas.html # Listas não ordenadas, ordenadas e nav externa
-│
-├── exercicio03/
-│ └── feedback.html # Formulário com campos diversos e botão de envio
-│
-├── exercicio04-05/
-│ └── README.md # Explicação dos estilos aplicados via CSS
-│
-├── exercicio06/
-│ ├── galeria.html # Galeria responsiva com Grid e Flexbox
-│ └── imagens/ # Contém 8 imagens nomeadas como img1.jpg até img8.jpg
-│
-├── exercicio07/
-│ └── README.md # Detalhamento da implementação do menu hamburger
-│
-└── README.md # Este arquivo
+.
+├── assets
+│   ├── scripts.js
+│   └── styles.css
+├── exercicio01
+│   └── index.html
+├── exercicio02
+│   └── listas.html
+├── exercicio03
+│   └── feedback.html
+├── exercicio06
+│   ├── galeria.html
+│   └── imagens
+│       ├── img1.jpg
+│       ├── img2.jpg
+│       ├── img3.jpg
+│       ├── img4.jpg
+│       ├── img5.jpg
+│       ├── img6.jpg
+│       ├── img7.jpg
+│       └── img8.jpg
+└── exercicio07
+    └── README.md
 
 ---
 
