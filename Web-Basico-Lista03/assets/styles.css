@@ -1,0 +1,230 @@
+/* Definição de variáveis de cores */
+:root {
+  --background: hsl(210 40% 98%);
+  --foreground: hsl(222.2 84% 4.9%);
+  --card: hsl(0 0% 100%);
+  --primary: hsl(221, 83%, 53%); /* Azul vibrante */
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(210, 40%, 94%);
+  --destaque-bg: hsl(45, 93%, 88%);
+  --footer-bg: hsl(222.2, 84%, 4.9%); /* Azul escuro */
+  --footer-text: hsl(210, 40%, 98%);
+}
+
+/* Estilos gerais do corpo da página */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* Container para o conteúdo principal */
+#main-content {
+  padding: 1rem;
+}
+
+/* Cabeçalho, Principal e Rodapé (Exercício 1 e 4) */
+.exercise-header {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border: 2px solid var(--primary);
+  border-radius: 0.5rem;
+}
+
+.exercise-main {
+  background-color: var(--card);
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border: 2px dashed var(--secondary);
+  border-radius: 0.5rem;
+}
+
+.exercise-footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+/* Estilos para H2, destaque e importante (Exercício 5) */
+.exercise-h2 {
+  font-size: 1.5em;
+  text-decoration: underline;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--primary);
+}
+
+.destaque {
+  font-style: italic;
+  background-color: var(--destaque-bg);
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.importante {
+  border-top: 4px solid var(--primary);
+  padding-top: 0.75rem;
+  margin-top: 1rem;
+}
+
+/* Galeria (Exercício 6) */
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.gallery-grid {
+  display: grid;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1200px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.gallery-grid figure img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.gallery-grid figcaption {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Formulário (Exercício 3) */
+.form-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--card);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.form-container .form-group {
+  margin-bottom: 1.5rem;
+}
+.form-container label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+.form-container input,
+.form-container select,
+.form-container textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+}
+.form-container button {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Menu Lateral (Exercício 7) */
+.hamburger-icon {
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0 15px;
+}
+
+header.main-header {
+  display: flex;
+  align-items: center;
+  background-color: var(--primary);
+  color: white;
+  padding: 0.5rem;
+}
+
+.sidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 3000;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  padding-top: 20px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  font-size: 36px;
+  color: #f1f1f1;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #ccc;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 60px 0 0 0;
+  margin: 0;
+}
+
+.sidebar ul li a {
+  padding: 15px 20px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #f1f1f1;
+  display: block;
+}
+
+.sidebar ul li a:hover {
+  background-color: #575757;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0s 0.3s;
+}
+
+.overlay.show {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease-in-out;
+}

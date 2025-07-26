@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Feedback</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+
+  <nav id="sidebar-menu" class="sidebar">
+    <button id="close-btn" class="close-btn">&times;</button>
+    <ul>
+      <li><a href="../exercicio01/index.html">Início</a></li>
+      <li><a href="../exercicio02/listas.html">Listas e Links</a></li>
+      <li><a href="../exercicio03/feedback.html">Feedback</a></li>
+      <li><a href="../exercicio06/galeria.html">Galeria</a></li>
+    </ul>
+  </nav>
+
+  <div id="overlay" class="overlay"></div>
+
+  <div id="main-content">
+    <header class="main-header">
+      <button id="hamburger-btn" class="hamburger-icon">&#9776;</button>
+      <div class="logo">Indústrias Stark</div>
+    </header>
+
+    <main>
+      <div class="form-container">
+        <h2 style="text-align: center;">Formulário de Feedback</h2>
+        <form action="#" method="POST">
+          <div class="form-group">
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="endereco">Endereço Completo</label>
+            <input type="text" id="endereco" name="endereco" placeholder="Rua, número, bairro, cidade" required>
+          </div>
+          <div class="form-group">
+            <label for="tipoFeedback">Tipo de Feedback</label>
+            <select id="tipoFeedback" name="tipoFeedback" required>
+              <option value="">Selecione o tipo</option>
+              <option value="sugestao">Sugestão</option>
+              <option value="reclamacao">Reclamação</option>
+              <option value="elogio">Elogio</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="feedback">Sua Mensagem</label>
+            <textarea id="feedback" name="feedback" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
+          </div>
+          <button type="submit">Enviar Feedback</button>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <script src="../assets/scripts.js"></script>
+</body>
+</html>
